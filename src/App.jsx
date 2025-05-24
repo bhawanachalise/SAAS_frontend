@@ -1,28 +1,19 @@
-import {BrowserRouter,Router,Routes,Route} from "react-router-dom"//package.json baata router laai export gareko yahaa(install gareko router)
+import {BrowserRouter,Routes,Route} from "react-router-dom"//package.json baata router laai export gareko yahaa(install gareko router)
+import HomePage from "./pages/HomePage"
+import SinglePage from "./pages/SinglePage"
+import CreatePage from "./pages/CreatePage"
+import EditPage from "./pages/EditPage"
+function App(){
+  return(
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="single-page" element={<SinglePage/>}/>
+      <Route path="create-page" element={<CreatePage/>}/>
+      <Route path="edit-page" element={<EditPage/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
 
-
-import Home from "./Home"
-import About from "./About"
-import LearningUseEffect from "./LearningUseEffect"
-import Contact from "./Contact"
-
-     function App(){
-      return (
-        <BrowserRouter>
-        <Routes>  
-          <Route path="/" element={<Home />}/>
-          <Route path="/About" element={<About />}/>
-          <Route path="/Contact" element={<Contact/>}/>
-          <Route path="/useeffect" element={<LearningUseEffect />}/>
-       
-         
-
-        </Routes>
-        </BrowserRouter>
-        )
-     } 
-     
-        
-      
-      
+}
 export default App
